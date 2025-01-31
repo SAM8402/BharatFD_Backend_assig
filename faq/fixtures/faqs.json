@@ -1,0 +1,38 @@
+[
+    {
+        "model": "faq.faq",
+        "pk": 1,
+        "fields": {
+            "question": "What is Django?",
+            "answer": "Django is a web framework for Python.",
+            "question_hi": "Django क्या है?",
+            "question_bn": "ডjango কি?",
+            "answer_hi": "Django पायथन के लिए एक वेब फ्रेमवर्क है।",
+            "answer_bn": "ডjango পাইথনের জন্য একটি ওয়েব ফ্রেমওয়ার্ক।"
+        }
+    },
+    {
+        "model": "faq.faq",
+        "pk": 2,
+        "fields": {
+            "question": "How do I install Django?",
+            "answer": "You can install Django using pip: `pip install django`.",
+            "question_hi": "Django कैसे इंस्टॉल करें?",
+            "question_bn": "ডjango কিভাবে ইনস্টল করব?",
+            "answer_hi": "आप Django को pip का उपयोग करके इंस्टॉल कर सकते हैं: `pip install django`।",
+            "answer_bn": "আপনি pip ব্যবহার করে Django ইনস্টল করতে পারেন: `pip install django`।"
+        }
+    },
+    {
+        "model": "faq.faq",
+        "pk": 3,
+        "fields": {
+            "question": "What is a Django model?",
+            "answer": "A Django model is a Python class that represents a database table.",
+            "question_hi": "Django मॉडल क्या है?",
+            "question_bn": "ডjango মডেল কি?",
+            "answer_hi": "Django मॉडल एक पायथन क्लास है जो डेटाबेस टेबल का प्रतिनिधित्व करती है।",
+            "answer_bn": "ডjango মডেল হল একটি পাইথন ক্লাস যা ডাটাবেস টেবিলের প্রতিনিধিত্ব করে।"
+        }
+    }
+]
