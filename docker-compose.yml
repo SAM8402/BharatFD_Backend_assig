@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Django application container
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=assignment.settings
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/assignment_db
+    networks:
+      - app-network
+
+  # PostgreSQL database container
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: assignment_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - app-network
+
+  # Redis for caching (optional, if you're using Redis)
+  redis:
+    image: redis:alpine
+    networks:
+      - app-network
+
+# Volumes to persist data
+volumes:
+  postgres_data:
+
+    # Define network for the containers to communicate
+networks:
+  app-network:
+    driver: bridge
