@@ -1,4 +1,4 @@
-Django==5.0.4
+Django==4.2.7
 django-ckeditor==6.7.0
 djangorestframework==3.14.0
 googletrans==4.0.0-rc1
